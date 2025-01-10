@@ -1,0 +1,8 @@
+streamlit
+langchain
+pandas
+numpy
+docx
+pypdf2
+python-dotenv
+langchain_core

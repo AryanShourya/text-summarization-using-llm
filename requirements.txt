@@ -6,3 +6,4 @@ docx
 pypdf2
 python-dotenv
 langchain_core
+langchain_mistralai

@@ -32,9 +32,10 @@ def main():
     text_input = st.text_area("Enter paragraph",max_chars=10000,height=350,value="",key="textbox")
 
     sum = st.button("Summary")
-    result = summarize_text(text_input)
+
     if sum:
-         st.text_area("Here is your summary:",value=result,height=350)
+        result = summarize_text(text_input)
+        st.text_area("Here is your summary:",value=result,height=350)
 
 if __name__ == "__main__":
     main()

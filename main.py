@@ -34,8 +34,9 @@ def main():
     sum = st.button("Summary")
 
     if sum:
-        result = summarize_text(text_input)
-        st.text_area("Here is your summary:",value=result,height=350)
+        with st.spinner("Generating summary...."):
+            result = summarize_text(text_input)
+            st.text_area("Here is your summary:",value=result,height=350)
 
 if __name__ == "__main__":
     main()

@@ -2,13 +2,14 @@ import streamlit as st
 import os
 from langchain.chains.question_answering.map_reduce_prompt import system_template
 from langchain.chains.summarize.refine_prompts import prompt_template
-from langchain_mistralai import ChatMistralAI
+# from langchain_mistralai import ChatMistralAI
+from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate
 from dotenv import load_dotenv
 
 load_dotenv()
-api_key = os.getenv("MISTRAL_API_KEY")
-llm = ChatMistralAI(api_key=api_key)
+api_key = os.getenv("GOOGLE_GEMINI_API_KEY")
+llm = ChatGoogleGenerativeAI(api_key=api_key)
 
 # summarization part
 def summarize_text(text_input):
